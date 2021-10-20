@@ -71,6 +71,9 @@ p {
   #container2 {
     grid-template-columns: 1fr 1fr;
 }
+ #container-results {
+    grid-template-columns: 1fr 1fr;
+}
   
 }
 
@@ -80,6 +83,9 @@ p {
       grid-template-columns: 1fr;
   }
   #container2 {
+    grid-template-columns: 1fr;
+}
+ #container-results {
     grid-template-columns: 1fr;
 }
   
