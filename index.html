@@ -19,10 +19,10 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a onclick="hideContainer()" class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a onclick="ViewCaracterContainer()" class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a onclick="hideContainer()" class="nav-link" href="#">Episodes</a>
+                    <a onclick="ViewEpisodeContainer()" class="nav-link" href="#">Episodes</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Favorite</a>
@@ -35,13 +35,12 @@
             </div>
           </nav>
 
-<!-- this button to call function view -->
-
- <!-- <div class="main-button"><button class="btn btn-outline-success" onclick="view()">View all characters</button></div> -->
-
+    <!-- for the characters -->
     <div id="container"></div>
-
+    <!-- for the episodes -->
     <div id="container2"></div>
+    <!-- for the search results -->
+    <div id="container-results"></div>
     
     <script src="main.js"></script>
 </body>

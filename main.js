@@ -1,6 +1,4 @@
 function viewCharacters() {
-
-
   fetch(`https://rickandmortyapi.com/api/character`)
   .then(function(response) {
       // it will come back as object because .json
@@ -135,7 +133,6 @@ function viewAllCharacters() {
 
 function search(e) {
   const userInput = document.getElementById("my-text").value;
-  console.log("the input is " + userInput)
   e.preventDefault();
 
   const url = "https://rickandmortyapi.com/api/character";
@@ -148,14 +145,16 @@ function search(e) {
       const resultArray = json.results;
       console.log(resultArray)
 
+      // this line will cleare the container
+      document.querySelector("#container-results").innerHTML = "";
+      // call this function to make the display grid
+      viewResultContainer();
       
-      hideCards();
 
-      console.log(resultArray[1].id)
       // showing the results
       let btnArray = [];
       let id = [];
-      const container = document.querySelector("#container");
+      const container = document.querySelector("#container-results");
       for (let i = 0; i < resultArray.length; i++) {
           id.push(resultArray[i].id)
           const divs = document.createElement("div");
@@ -219,18 +218,31 @@ function hideCards() {
   }   
 }
 
-function hideContainer() {
-  const container = document.querySelector("#container");
+function viewResultContainer() {
+  const container1 = document.querySelector("#container");
   const container2 = document.querySelector("#container2");
-  if( container.style.display === "none"){
-    container.style.display = "grid";
-    container2.style.display = "none"
- }
- else{
-     container.style.display = "none";
-     container2.style.display = "grid" 
-      }
+  const container3 = document.querySelector("#container-results");
+  container1.style.display = "none";
+  container2.style.display = "none";
+  container3.style.display = "grid";
+}
+function ViewCaracterContainer() {
+  const container1 = document.querySelector("#container");
+  const container2 = document.querySelector("#container2");
+  const container3 = document.querySelector("#container-results");
 
+  container3.style.display = "none"
+  container2.style.display = "none";
+  container1.style.display = "grid"
+}
+function ViewEpisodeContainer() {
+  const container1 = document.querySelector("#container");
+  const container2 = document.querySelector("#container2");
+  const container3 = document.querySelector("#container-results");
+
+  container1.style.display = "none"
+  container3.style.display = "none";
+  container2.style.display = "grid"
 }
 
  
