@@ -197,10 +197,10 @@ function search(e) {
           divs.append(div2); 
           div2.append(name);
           // divs.append(button);
-          divs.append(pstatus)
-          divs.append(pgender)
-          divs.append(pspecies)
-          divs.append(plocation) 
+          div2.append(pstatus)
+          div2.append(pgender)
+          div2.append(pspecies)
+          div2.append(plocation) 
 
           // btnArray.push(button)
       }
