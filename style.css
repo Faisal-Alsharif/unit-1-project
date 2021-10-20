@@ -1,5 +1,6 @@
 body {
-    background-color: rgba(191, 245, 239, 0.966);
+    /* https://www.grabient.com/ */
+    background-image: linear-gradient(#D5FDFD,#DCC7DC);
 }
 
 header {
@@ -44,8 +45,22 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+#container2 .card-img-top{
+    margin-bottom: 20px;
+}
 #container-results {
     display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+#container-results h5 {
+    margin-bottom: 20px;
+}
+#container4 {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 20px;
     justify-content: space-around;
@@ -74,6 +89,10 @@ p {
  #container-results {
     grid-template-columns: 1fr 1fr;
 }
+#container4 {
+    grid-template-columns: 1fr 1fr;
+
+}
   
 }
 
@@ -87,6 +106,10 @@ p {
 }
  #container-results {
     grid-template-columns: 1fr;
+}
+ #container4 {
+    grid-template-columns: 1fr;
+
 }
   
 }
