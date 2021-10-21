@@ -29,7 +29,20 @@ function viewCharacters() {
 
         const div2 = document.createElement("div")
         div2.className = "card-body";
-        div2.id = id;
+        // div2.id = id;
+
+        const divInfo = document.createElement("div")
+        divInfo.className = "div-info"
+        divInfo.id = id;
+
+        const pstatus = document.createElement("p")
+        pstatus.innerText = "status: " + characters[i].status;
+        const pgender = document.createElement("p")
+        pgender.innerText = "Gender: " + characters[i].gender;
+        const pspecies = document.createElement("p")
+        pspecies.innerText = "species: " + characters[i].species;
+        const plocation = document.createElement("p")
+        plocation.innerText = "Location: " + characters[i].location.name;
 
         const button = document.createElement("button")
         button.innerText = "more info"
@@ -41,6 +54,11 @@ function viewCharacters() {
         divs.append(img);
         divs.append(div2); 
         div2.append(name);
+        div2.append(divInfo)
+        divInfo.append(pstatus)
+        divInfo.append(pgender)
+        divInfo.append(pspecies)
+        divInfo.append(plocation)
         divs.append(button);
 
       // push button in the array
@@ -49,25 +67,13 @@ function viewCharacters() {
 
     for (let i = 0; i < btnsArray.length; i++) {
       btnsArray[i].addEventListener("click" , function () {
-        const div = document.createElement("div")
-        const pstatus = document.createElement("p")
-        pstatus.innerText = "status: " + characters[i].status;
-        const pgender = document.createElement("p")
-        pgender.innerText = "Gender: " + characters[i].gender;
-        const pspecies = document.createElement("p")
-        pspecies.innerText = "species: " + characters[i].species;
-        const plocation = document.createElement("p")
-        plocation.innerText = "Location: " + characters[i].location.name;
-
-        // id starting from 1 and i starting from 0
         let id = i + 1;
-        // to get the specific card to append 
-        const card = document.getElementById(id)
-        card.append(div)
-        div.append(pstatus)
-        div.append(pgender)
-        div.append(pspecies)
-        div.append(plocation)        
+        const myDiv = document.getElementById(id)
+        if(myDiv.style.display === "block"){
+            myDiv.style.display = "none"
+        }
+        else 
+        myDiv.style.display = "block";        
     }) 
     }
 
